@@ -1,0 +1,320 @@
+/* ---------------- */
+/* Material Design 	*/
+/* #Version : 1.0 (05/07/2021) */
+/* #Author : Benjamin Fourmaux--Beruet */
+/* ---------------- */
+
+
+/* Initialize :root property */
+:root {
+	/* -- Colors -- */
+	--g-color-blue: #4285F4; /*Blue*/
+	--g-color-red: #DB4437; /*Red*/
+	--g-color-yellow: #F4B400; /*yellow*/
+	--g-color-green: #0F9D58; /*green*/
+	--g-color-android: #78C257;
+	--g-color-title: var(--g-color-grey-500);
+	--g-color-subTite: #787575;
+	--g-color-link: #1976d2;
+	/* grey */
+	--g-color-grey-d: #e7e7e7; /* grey dark*/
+	--g-color-grey-25: #F8F8F8;
+    --g-color-grey-50: #F2F2F2;
+    --g-color-grey-100: #DCDBDB;
+    --g-color-grey-200: #A09E9E;
+    --g-color-grey-400: #636060;
+    --g-color-grey-500: #423F3F;
+    --g-color-grey-800: #191818;
+    --g-color-grey-900: #050505;
+	/* other */
+	--g-color-focus: #4d90fe;
+	--g-color-error: #c53929;
+	/* -- ------ -- */
+}
+
+/* ---------------------- */
+/* |   Generic class	| */	
+/* ---------------------- */
+
+
+
+
+/* ---------------------- */
+/* |	    FORM		| */	
+/* ---------------------- */
+	/* --- Form group --- */
+		/* Basic */
+.material-form-control-group {
+	position: relative; 
+	height: 72px;
+	padding: 16px 0 8px 0;
+	margin-top: 10px;
+}
+		/* Filled */
+.material-form-control-group-filled {
+	position: relative;
+	top: 8px;
+	height: 56px;
+	padding: 16px 0 8px 0;
+	margin-top: 10px;    
+	margin-bottom: 25px;
+	
+	border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+	
+	background: var(--g-color-grey-100);
+}
+		/* Outlined */
+.material-form-control-group-outlined {
+	position: relative;
+    z-index: 2;	
+}
+		
+/* generic properties */
+.material-form-control-group:after, 
+.material-form-control-group:before,
+.material-form-control-group-filled:after,
+.material-form-control-group-filled:before {
+	content: "";
+	height: 2px;
+	width: 100%;
+	position: absolute;
+	bottom: 6px;
+	left: 0;
+	background-color: var(--g-color-grey-200);
+}
+.material-form-control-group:after,
+.material-form-control-group-filled:after {
+	transform: scaleX(0);
+	background-color: var(--g-color-focus);
+	transition: transform 0.3s;
+}
+/* is focus */
+.material-form-control-group.is-focus:after,
+.material-form-control-group-filled.is-focus:after {
+	transform: scaleX(1);
+}
+
+
+	/* --- Label --- */
+		/* Basic */
+.material-form-control-label {
+	position: relative;
+	margin: 0;
+	display: block;
+	cursor: text;
+    pointer-events: none;
+
+	color:  var(--g-color-grey-200);
+	line-height: 16px;
+	font-size: 20px;
+	font-weight: 400;
+
+	transform: translateY(24px);
+	transition: transform 0.3s, font-size 0.3s;
+	transform-origin: 0 50%;
+}
+/* has label */
+.has-label .material-form-control-label {
+	transform: translateY(0) scale(0.75);
+}
+/* is focus */
+.is-focus .material-form-control-label {
+	color: var(--g-color-focus);
+}
+
+		/* filled */
+.material-form-control-label-filled {
+	width: fit-content;
+	position: relative;
+	bottom: 50px;
+	margin-left: 10px;
+	margin-right: auto;
+	display: block;
+	cursor: text;
+    pointer-events: none;
+
+	color:  var(--g-color-grey-200);
+	line-height: 16px;
+	font-size: 20px;
+	font-weight: 400;
+
+	transform: translateY(24px);
+	transition: transform 0.3s, font-size 0.3s;
+	transform-origin: 0 50%;
+}
+/* has label */
+.has-label .material-form-control-label-filled {
+	transform: translateY(0) scale(0.75);
+	bottom: 45px;
+}
+/* is focus */
+.is-focus .material-form-control-label-filled {
+	color: var(--g-color-focus);
+}
+		/* Outlined */
+.material-form-control-label-outlined {
+	width: fit-content;
+	position: relative;
+	bottom: 58px;
+	margin-left: 10px;
+	margin-right: auto;
+	display: block;
+	cursor: text;
+    pointer-events: none;
+
+	color:  var(--g-color-grey-200);
+	background: white;
+	line-height: 16px;
+	font-size: 20px;
+	font-weight: 400;
+
+	transform: translateY(24px);
+	transition: transform 0.3s, font-size 0.3s;
+	transform-origin: 0 50%;
+}
+/* has label */
+.has-label .material-form-control-label-outlined {
+	transform: translateY(0) scale(0.75);
+	bottom: 58px;
+}
+/* is focus */
+.is-focus .material-form-control-label-outlined {
+	color: var(--g-color-focus);
+}
+/* error */
+.error .material-form-control-label-outlined {
+	color: var(--g-color-error);
+}
+
+
+	/* --- Input --- */
+		/* Basic */
+.material-form-control-input {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 32px;
+	padding: 8px 0;
+
+	line-height: 16px;
+	font-family: Roboto;
+	font-size: 16px;
+
+	background: transparent;
+	border: none;
+	-webkit-appearance: none;
+	outline: none;
+}
+		/* filled */
+.material-form-control-input-filled {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 32px;
+	padding: 8px 10px;
+
+	line-height: 16px;
+	font-family: Roboto;
+	font-size: 16px;
+
+	background: transparent /*var(--g-color-grey-100)*/;
+	border: none;
+	-webkit-appearance: none;
+	outline: none;
+}
+		/* Outlined */
+.material-form-control-input-outlined {
+    border: 1px solid #DADCE0;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    height: 50px;
+}
+.is-focus .material-form-control-input-outlined {
+	box-shadow: none;
+    outline: none;
+    border-color: var(--g-color-focus);
+}
+.error .material-form-control-input-outlined {
+	border-color: var(--g-color-error);
+}
+
+	/* --- Textarea --- */
+.material-form-control-group.textarea textarea,
+.material-form-control-group-filled.textarea textarea,
+.material-form-control-group-outlined.textarea textarea {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 32px;
+	padding: 8px 0;
+
+	line-height: 16px;
+	font-family: Roboto;
+	font-size: 16px;
+	
+	resize: none;
+	
+	background: transparent;
+	border: none;
+	-webkit-appearance: none;
+	outline: none;
+}
+.material-form-control-group.textarea:after, .material-form-control-group.textarea:before,
+.material-form-control-group-filled.textarea:after, .material-form-control-group-filled.textarea:before {
+	content: "";
+	height: 2px;
+	width: 100%;
+	position: absolute;
+	bottom: -35px;
+	left: 0;
+	background-color: var(--g-color-grey-200);
+}
+/* height row */
+.material-form-control-group.textarea textarea.hr-4,
+.material-form-control-group-filled.textarea textarea.hr-4 {
+	height: 68px;
+}
+
+
+
+	/* --- Input radio button --- */
+.material-form-control-radio {
+	width: 1.3em;
+	height: 1.3em;
+}
+
+	/* --- Error --- */
+span.error-label {
+	color: var(--g-color-error);
+	font-size: 16px;
+}
+.material-form-control-group span.error-label {
+	position: relative;
+    top: 1px;
+}
+.material-form-control-group-filled span.error-label,
+.material-form-control-group-outlined span.error-label {
+	position: absolute;
+    top: 55px;
+}
+.is-focus.error .material-form-control-label,
+.is-focus.error .material-form-control-label-filled {
+	color: var(--g-color-error);
+}
+.material-form-control-group.error:after,
+.material-form-control-group-filled.error:after {
+	background-color: var(--g-color-error);
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------*/
+
+/* ---------------------- */
+/* |	MEDIA QUERY		| */	
+/* ---------------------- */
