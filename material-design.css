@@ -1,6 +1,6 @@
 /* ---------------- */
 /* Material Design 	*/
-/* #Version : 1.0 (05/07/2021) */
+/* #Version : 1.1 (16/07/2021) */
 /* #Author : Benjamin Fourmaux--Beruet */
 /* ---------------- */
 
@@ -285,6 +285,7 @@
 	height: 1.3em;
 }
 
+
 	/* --- Error --- */
 span.error-label {
 	color: var(--g-color-error);
@@ -309,8 +310,51 @@ span.error-label {
 }
 
 
-
-
+/* ---------------------- */
+/* |	 ACCORDION   	| */	
+/* ---------------------- */
+.material-accordion {	
+}
+.material-accordion .card {
+	border: none;
+}
+.material-accordion .card-header {
+	background-color: inherit;
+    border-bottom: none;	
+}
+.material-accordion .card .card-head .row {
+	margin-top: 20px;
+    margin-bottom: 20px;
+}
+.material-accordion .card .card-body .row {
+	padding-top: 20px;
+    padding-bottom: 20px;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.material-accordion .material-accordion-icon, 
+.material-accordion .material-accordion-chevron {
+	font-size: 21px;
+	text-align: center;
+}
+/* box */
+.material-accordion .material-accordion-box .title {
+	font-size: 21px;
+	color: black;
+}
+.material-accordion .material-accordion-box .other {
+	font-size: 18px;
+    color: var(--g-color-grey-200);
+}
+/* chevron */
+.material-accordion .row.collapsed .material-accordion-chevron .chevron-up {
+	display: none;
+}
+.material-accordion .row.collapsed .material-accordion-chevron .chevron-down {
+	display: block;
+}
+.material-accordion .row .material-accordion-chevron .chevron-down {
+	display: none;
+}
 
 
 /*-------------------------------------------------------------*/
