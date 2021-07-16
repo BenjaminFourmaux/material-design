@@ -19,7 +19,9 @@ For the moment material-deisgn need jQuery (3.4.1) and can work with Bootstrap.
   - [ ] Form controls
   - [ ] Container
   - [ ] Menu bar
+  - [x] Accordion
 - [ ] Create a Bootstrap less branch
 
 ## Version
+- **1.1** : Add class for material accordion
 - **1.0** : Create the project with input form controls (With variant : basic, filled and outlined).
